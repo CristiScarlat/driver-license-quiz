@@ -1,0 +1,134 @@
+#header-question{
+    background: #d8d8d8;
+    padding: 0;
+    margin: 0;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back-button {
+    margin-right: 1rem;
+    background: white;
+    outline: white;
+}
+
+#header-question p{
+    margin-left: 1rem;
+}
+
+#footer-question{
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-page-button {
+    font-size: 37px;
+    padding: 10px;
+    background: linear-gradient(0.5turn, #8999e0b3, #ebeff5, #8999e0b3);
+    border-radius: 10px;
+    outline: #d8d8d88a;
+}
+
+.back-button {
+    font-size: 16px;
+}
+
+.icon-button {
+    display: flex;
+    font-size: 24px;
+    align-items: center;
+}
+
+.answer-button {
+    font-weight: bold;
+    font-size: 56px;
+    padding: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-transform: capitalize;
+}
+
+.answer-button.selected{
+    background: #c2ce2c;
+}
+
+.question-icon-correct {
+    width: 2rem;
+    border-radius: 50%;
+    box-shadow: 4px -2px 4px white;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    
+}
+
+#main-question {
+    padding: 1rem;
+    min-height: 70%;
+}
+
+.question-question-container {
+    display: flex;
+    min-height: 10rem;
+}
+
+.question-question-section {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid #0008ff;
+    border-radius: 25px;
+    flex: 1;
+    margin-right: 2rem;
+}
+
+span {
+    color: red;
+    font-size: 36;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.question-question-section div {
+    font-size: 36;
+    font-weight: bold;
+}
+
+.question-picture-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border: 1px solid #0008ff;
+    border-radius: 25px;
+    width: 320px;
+}
+
+.question-picture-section img {
+    max-width: 320px;
+    border-radius: 25px;
+}
+
+.question-answer-container {
+    min-height: 10rem;
+    border: 1px solid #0008ff;
+    border-radius: 25px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.question-answer-buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.answers-status {
+    margin-left: 1rem; 
+    margin-bottom: 0.5rem;
+    line-height: 5px;
+}
+
+.answers-status p{
+    margin-right: 0.5rem;
+}
