@@ -24,7 +24,7 @@ const IndexPage = () => {
         }
     })
 
- })
+ },[])
 
  function handleLogout() {
    auth.signOut()
