@@ -101,7 +101,7 @@ span {
     background: white;
     border: 1px solid #0008ff;
     border-radius: 25px;
-    width: 320px;
+    min-width: 320px;
 }
 
 .question-picture-section img {
@@ -132,3 +132,4 @@ span {
 .answers-status p{
     margin-right: 0.5rem;
 }
+

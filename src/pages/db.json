@@ -8,7 +8,7 @@
                 "c) das zweite Verkehrszeichen. "
             ],
             "picture": "168",
-            "corectAnswers": "a,b",
+            "corectAnswers": "b",
             "category": "Verkehrszeichen "
         },
         {
@@ -19,7 +19,7 @@
                 "c) den Reifendruck zu überprüfen."
             ],
             "picture": "82",
-            "corectAnswers": "c",
+            "corectAnswers": "b",
             "category": "Verkehrszeichen "
         },
         {
@@ -30,7 +30,7 @@
                 "c) mindern die Geschwindigkeit, sichern sich ab und überqueren vorsichtig."
             ],
             "picture": "157",
-            "corectAnswers": "c,a",
+            "corectAnswers": "b",
             "category": "Verkehrszeichen "
         },
         {
@@ -41,7 +41,7 @@
                 "c) das zweite Verkehrszeichen."
             ],
             "picture": "365",
-            "corectAnswers": "b,c",
+            "corectAnswers": "a",
             "category": "Verkehrszeichen "
         },
         {
@@ -52,7 +52,7 @@
                 "c) Zugang der Lkws und Busse."
             ],
             "picture": "178",
-            "corectAnswers": "b,c",
+            "corectAnswers": "a",
             "category": "Verkehrszeichen "
         },
         {
@@ -63,7 +63,7 @@
                 "c) das zweite Verkehrszeichen."
             ],
             "picture": "261",
-            "corectAnswers": "b,c",
+            "corectAnswers": "c",
             "category": "Verkehrszeichen "
         },
         {
@@ -74,7 +74,7 @@
                 "c) Ende aller Einschränkungen."
             ],
             "picture": "171",
-            "corectAnswers": "b,c",
+            "corectAnswers": "a",
             "category": "Verkehrszeichen "
         },
         {
@@ -85,7 +85,7 @@
                 "c) beim Auftreten des zweiten Verkehrszeichens."
             ],
             "picture": "208",
-            "corectAnswers": [],
+            "corectAnswers": "c",
             "category": "Verkehrszeichen"
         },
         {
@@ -96,7 +96,7 @@
                 "c) weniger als 50 km / h."
             ],
             "picture": "185",
-            "corectAnswers": [],
+            "corectAnswers": "b",
             "category": "Verkehrszeichen"
         },
         {
@@ -107,7 +107,7 @@
                 "c) die Straße mit Schutzgeländer versehen ist."
             ],
             "picture": "21",
-            "corectAnswers": [],
+            "corectAnswers": "b",
             "category": "Verkehrszeichen"
         },
         {
@@ -118,7 +118,7 @@
                 "c) Seitenwind"
             ],
             "picture": "43",
-            "corectAnswers": [],
+            "corectAnswers": "c",
             "category": "Verkehrszeichen"
         },
         {
@@ -129,7 +129,7 @@
                 "c) Nur PKWs."
             ],
             "picture": "186",
-            "corectAnswers": [],
+            "corectAnswers": "b",
             "category": "Verkehrszeichen"
         },
         {
@@ -140,7 +140,7 @@
                 "c) Abschleppen."
             ],
             "picture": "188",
-            "corectAnswers": [],
+            "corectAnswers": "b",
             "category": "Verkehrszeichen"
         },
         {
@@ -151,7 +151,7 @@
                 "c) das zweite Verkehrszeichen."
             ],
             "picture": "223",
-            "corectAnswers": [],
+            "corectAnswers": "a",
             "category": "Verkehrszeichen"
         },
         {
@@ -162,7 +162,7 @@
                 "c) eine Steigung mit einem großen Neigungswinkel auf einer Länge von 2000 m"
             ],
             "picture": "15",
-            "corectAnswers": [],
+            "corectAnswers": "c",
             "category": "Verkehrszeichen"
         },
         {
@@ -173,7 +173,7 @@
                 "c) Vorfahrt für  den entgegenkommenden Verkehr."
             ],
             "picture": "48",
-            "corectAnswers": [],
+            "corectAnswers": "a",
             "category": "Verkehrszeichen"
         },
         {
@@ -184,7 +184,7 @@
                 "c) Rennbahn für Fußgänger."
             ],
             "picture": "247",
-            "corectAnswers": [],
+            "corectAnswers": "a",
             "category": "Verkehrszeichen"
         },
         {
@@ -195,7 +195,7 @@
                 "c) Kurve nach rechts. "
             ],
             "picture": "264",
-            "corectAnswers": [],
+            "corectAnswers": "c",
             "category": "Verkehrszeichen"
         },
         {
@@ -206,7 +206,7 @@
                 "c) wenden, denn es folgt ein Straßenabschnitt der für dem Verkehr der Fahrzeuge verboten ist."
             ],
             "picture": "220",
-            "corectAnswers": [],
+            "corectAnswers": "a",
             "category": "Verkehrszeichen"
         },
         {

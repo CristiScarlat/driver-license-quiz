@@ -1,5 +1,5 @@
 import React from 'react'
-import './css/registerForm.css'
+import { Form, Button } from 'react-bootstrap';
 
 
 const RegisterLoginForm = ({ handleFormSubmit }) => {
@@ -7,14 +7,25 @@ const RegisterLoginForm = ({ handleFormSubmit }) => {
     const emailRef = React.useRef()
     const pswRef = React.useRef()
 
-    return(
-        <form className="form-auth">
-            <label htmlFor="input-email">Email</label>
-            <input type="email" ref={emailRef}></input>
-            <label htmlFor="input-psw">Password</label>
-            <input type="password" ref={pswRef}></input>
-            <button className="form-auth-submit-btn" onClick={(e) => {e.preventDefault(); handleFormSubmit(emailRef.current.value, pswRef.current.value)}}>Submit</button>
-        </form>
+    return (
+        <Form>
+            <Form.Group className="mb-0" controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" ref={emailRef}/>
+                <Form.Text className="text-muted">
+                    We'll never share your email with anyone else.
+                </Form.Text>
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control type="password" placeholder="Password" ref={pswRef}/>
+            </Form.Group>
+
+            <Button variant="primary" onClick={(e) => {e.preventDefault(); handleFormSubmit(emailRef.current.value, pswRef.current.value)}}>
+                Submit
+            </Button>
+        </Form>
     )
 }
 
