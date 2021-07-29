@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import db from '../db.json'
+import db from '../db.json';
+import { Link } from 'gatsby';
+import { Button, Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
 
-
-const Quiz = ({ handleLogout }) => {
+const Quiz = ({ handleLogout, currentUser }) => {
 
   const categories = db.categories
   const quiz = db.qa
@@ -16,8 +17,9 @@ const Quiz = ({ handleLogout }) => {
     setQuizIndex(0)
   }, [selectedCategory])
 
-  function handleSelectCategory(e) {
-    setSelectedCategory(e.target.value)
+  function handleSelectCategory(category) {
+    console.log(category)
+    setSelectedCategory(category)
   }
 
   function handleNextIndex() {
@@ -35,7 +37,10 @@ const Quiz = ({ handleLogout }) => {
   return (
     <>
       <header>
-        <button onClick={handleLogout}>Logout</button>
+        {/* <div>{`Willkommen ${currentUser?.displayName || currentUser?.email}`}</div>
+        <Button variant="outline-primary" onClick={handleLogout}>Logout</Button>
+        <Link to="/account">Manage your Account</Link>
+        
         <div>
           <label className="label-select-category" htmlFor="select-category">Kategorie wählen:</label>
           <select id="select-category" onChange={handleSelectCategory}>
@@ -43,7 +48,26 @@ const Quiz = ({ handleLogout }) => {
               <option key={cat + index} value={cat}>{cat}</option>
             ))}
           </select>
-        </div>
+        </div> */}
+        <Navbar bg="dark" variant="dark" expand="lg" className="p-3">
+          {/* <Container> */}
+          <Navbar.Brand>{`Willkommen ${currentUser?.displayName || currentUser?.email}`}</Navbar.Brand>
+
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="w-100 justify-content-end align-items-center">
+
+              <NavDropdown title={selectedCategory} id="basic-nav-dropdown" onSelect={handleSelectCategory}>
+                {categories.map((cat, index) => (
+                  <NavDropdown.Item key={cat + index} eventKey={cat}>{cat}</NavDropdown.Item>
+                ))}
+              </NavDropdown>
+              <Link to="/account" className="ms-2 me-2">Manage your Account</Link>
+              <Button variant="outline-primary ms-3" onClick={handleLogout}>Logout</Button>
+            </Nav>
+          </Navbar.Collapse>
+          {/* </Container> */}
+        </Navbar>
       </header>
       <section id="main-question" className="main">
         <div className="question-subheader">
@@ -62,7 +86,7 @@ const Quiz = ({ handleLogout }) => {
           </div>
         </div>
         <div className="question-answer-container">
-          {selectedQuiz[quizIndex]?.answers?.map(answer => <div key={answer} style={{ display: 'flex', alignItems: 'center' }}><span>{answer?.substr(0, 2)}</span><p>{answer?.substr(2)}</p></div>)}
+          {selectedQuiz[quizIndex]?.answers?.map(answer => <div key={answer} className="d-flex align-items-center mb-4"><span>{answer?.substr(0, 2)}</span><div>{answer?.substr(2)}</div></div>)}
         </div>
         <div className="question-answer-buttons-container">
           <button className="question-page-button answer-button" id="answer-button-A">A</button>
@@ -79,11 +103,11 @@ const Quiz = ({ handleLogout }) => {
         </div>
         <button className="question-page-button  icon-button" id="delete-answer-button">
           <div>Antwort löschen</div>
-          <img src="icons/wrongIcon.jpg" className="question-icon-correct" alt=""/>
+          <img src="icons/wrongIcon.jpg" className="question-icon-correct" alt="" />
         </button>
         <button className="question-page-button  icon-button" id="send-answer-button">
           <div>Antwort senden</div>
-          <img src="icons/rightIcon.jpg" className="question-icon-correct" alt=""/>
+          <img src="icons/rightIcon.jpg" className="question-icon-correct" alt="" />
         </button>
       </footer>
     </>

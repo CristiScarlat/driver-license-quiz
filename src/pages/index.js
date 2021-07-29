@@ -7,32 +7,43 @@ import './css/responsive.css';
 import Quiz from './modules/quiz';
 import Auth from './modules/auth';
 import { auth } from '../firebase/firebase';
+import { Alert } from 'react-bootstrap';
 
 const IndexPage = () => {
 
-  const [isAuth, setIsAuth] = useState(false)
+  const [isAuth, setIsAuth] = useState(false);
+  const [currentUser, setCurrentUser] = useState();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    auth.onAuthStateChanged(function(user){
-        if(user){
-            console.log("isAuthenticated", user)
-            setIsAuth(true)
-        }
-        else{
-            console.log("isNotAuthenticated")
-            setIsAuth(false)
-        }
+    console.log("...loading")
+    setLoading(true)
+    auth.onAuthStateChanged(function (user) {
+      if (user) {
+        console.log("isAuthenticated", user)
+        setIsAuth(true)
+        setCurrentUser(user)
+      }
+      else {
+        console.log("isNotAuthenticated")
+        setIsAuth(false)
+        setCurrentUser(null)
+      }
+      setLoading(false)
     })
 
- },[])
+  }, [])
 
- function handleLogout() {
-   auth.signOut()
- }
-  
+  function handleLogout() {
+    auth.signOut()
+  }
+
   return (
     <main>
-     {isAuth ? <Quiz handleLogout={handleLogout}/> : <Auth/>}
+      {loading ? '...loading' : isAuth ? <Quiz handleLogout={handleLogout} currentUser={currentUser} /> : <Auth />}
+      {/* <Alert variant="danger" dismissible className="alert-style">
+        This is a danger alert—check it out!
+      </Alert> */}
     </main>
   )
 }
